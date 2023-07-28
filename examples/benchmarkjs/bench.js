@@ -4,10 +4,14 @@ const { fib } = require('./index');
 
 suite
     .add('fib(10)', () => {
-        fib(10);
+        setTimeout(() => {
+            fib(10);
+        }, 2000);
     })
     .add('fib(20)', () => {
-        fib(20);
+        setTimeout(() => {
+            fib(10);
+        }, 2000);
     })
     .on('cycle', (event) => {
         console.log(String(event.target));
