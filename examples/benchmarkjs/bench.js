@@ -17,13 +17,16 @@ const suite = new Benchmark.Suite();
 //     .run();
 
 suite
-    .add('RegExp#test', function() {
+    .add('RegExp#test', async function() {
+        await sleep(5000);
         /o/.test('Hello World!');
     })
-    .add('String#indexOf', function() {
+    .add('String#indexOf', async function() {
+        await sleep(5000);
         'Hello World!'.indexOf('o') > -1;
     })
-    .add('String#match', function() {
+    .add('String#match', async function() {
+        await sleep(5000);
         !!'Hello World!'.match(/o/);
     })
     // add listeners
