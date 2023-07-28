@@ -18,7 +18,7 @@ const suite = new Benchmark.Suite();
 
 suite
     .add('RegExp#test', async function() {
-        await sleep(10000);
+        // await sleep(1000);
         /o/.test('Hello World!');
     })
     // .add('String#indexOf', async function() {
