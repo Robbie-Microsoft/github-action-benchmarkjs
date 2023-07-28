@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "benchmark": "^2.1.4"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^1.18.0"
   }
 }
