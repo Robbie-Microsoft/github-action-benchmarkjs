@@ -95,9 +95,11 @@ const lastResourceRequest = {
     const suite = new Benchmark.Suite();
     suite
         .add("ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache", async () => {
+            await sleep(1000);
             await confidentialClientApplication.acquireTokenByClientCredential(firstResourceRequest);
         })
         .add("ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache", async () => {
+            await sleep(1000);
             await confidentialClientApplication.acquireTokenByClientCredential(lastResourceRequest);
         })
         // add listeners
@@ -112,9 +114,9 @@ const lastResourceRequest = {
         .run({ "async": true });
 })();
 
-// const sleep = (ms) => {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-// }
+const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 class NetworkUtils {
     static getNetworkResponse(headers, body, statusCode) {
