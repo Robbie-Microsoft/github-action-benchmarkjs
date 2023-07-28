@@ -95,11 +95,11 @@ const lastResourceRequest = {
     const suite = new Benchmark.Suite();
     suite
         .add("ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache", async () => {
-            // await sleep(10);
+            await sleep(10);
             await confidentialClientApplication.acquireTokenByClientCredential(firstResourceRequest);
         })
         .add("ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache", async () => {
-            // await sleep(10);
+            await sleep(10);
             await confidentialClientApplication.acquireTokenByClientCredential(lastResourceRequest);
         })
         // add listeners
